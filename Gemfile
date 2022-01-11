@@ -13,7 +13,7 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
+gem 'webpacker', '~> 5.4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,7 +27,7 @@ gem 'devise', '~> 4.8'
 gem 'devise-i18n', '~> 1.10'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'nokogiri', '~> 1.12', '>= 1.12.5'
-
+gem 'tailwindcss-rails', '~> 2.0', '>= 2.0.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -38,6 +38,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rubocop', '>= 1.22.1', require: false
+  gem 'pry-byebug'
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
 end
 
 group :development do
