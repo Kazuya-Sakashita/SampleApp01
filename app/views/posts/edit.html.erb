@@ -1,6 +1,17 @@
-<h1>Editing Post</h1>
+<div class="container px-5 py-24 mx-auto">
+  <div class="flex flex-col text-center w-full mb-20">
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">登録内容変更画面</h1>
+  </div>
+  <div class="flex flex-col text-center w-full mb-20">
+    <%= render 'form', post: @post %>
+    <div class="p-2 ">
+      <div class="relative">
+        <%= link_to 'Show', @post, class: "inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg" %>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col text-center w-full mb-20">
+    <%= link_to 'Back', posts_path %>
+  </div>
+</div>

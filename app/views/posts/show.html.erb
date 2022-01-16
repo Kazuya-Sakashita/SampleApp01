@@ -1,21 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="inline-block align-baseline flex-col ">
+  <p id="notice"><%= notice %></p>
+</div>
+<div class="flex-col text-gray-600 body-font">
+  <div class="container mx-auto flex-col  px-5 py-24 md:flex-row flex-col items-center">
+    <diV class="container">
+      <p class="mb-8 leading-relaxed">
+        <strong>内容:</strong>
+      <p id="speechtxt" class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"><%= @post.content %></p>
+    </div>
+    <diV class="container">
+      <div class="flex justify-center">
+        <button id="start" class="inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg">再生ボタン</button>
+        <button id="stop" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">停止ボタン</button>
+      </div>
+    </diV>
+  </div>
+  <%= link_to 'Back', posts_path %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-<p id="speechtxt"><%= @post.content %></p>
-  <button id="start">再生ボタン</button>
-  <button id="stop">停止ボタン</button>
-
-
-<p>
-  <strong>Author:</strong>
-  <%= @post.author %>
-</p>
-<%= link_to 'Back', posts_path %>
-
-<%= javascript_pack_tag 'speech' %>
+</div>
