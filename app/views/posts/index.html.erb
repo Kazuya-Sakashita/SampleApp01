@@ -23,7 +23,7 @@
 
       <div class="container px-5 py-5 mx-auto">
         <div class="p-2 m-2">
-          <%= link_to '新しく言葉を登録する', new_post_path, class: "inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg" %>
+          <%= link_to '新しく言葉を登録する', new_post_path, class: " text-blue-900 focus:outline-none hover:bg-teal-600 rounded " %>
         </div>
         <table class="table-auto w-full text-left whitespace-no-wrap  ">
           <thead>
@@ -38,24 +38,23 @@
           <tbody class="bg-white divide-y divide-gray-200">
           <% @posts.each do |post| %>
             <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
-              <td class="border-t-2 border-gray-200 px-4 py-3"><%= post.title %></td>
+              <td class="border-t-2 border-gray-200 px-4 py-3 "><%= post.title %></td>
               <td class="border-t-2 border-gray-200 px-4 py-3"><%= post.content %></td>
               <td class="border-t-2 border-gray-200 px-4 py-3"><%= post.author %></td>
-              <td class="px-4 py-3 text-lg text-gray-900">
-                <%= link_to 'Show', post, class: "inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg" %>
-                <%= link_to 'Edit', edit_post_path(post), class: "inline-flex text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg" %>
+              <td class="border-t-2 border-gray-200 px-4 py-3 text-black">
+                <div><%= link_to 'Show', post,class:"text-black" %></div>
+                <div><%= link_to 'Edit', edit_post_path(post),class:"text-black"  %></div>
               </td>
               <!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
             </tr>
           <% end %>
           </tbody>
         </table>
-
-        <br>
       </div>
       <div>
       </div>
     </div>
   </div>
+</div>
 
 
