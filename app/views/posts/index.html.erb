@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex overflow-y-scroll">
   <div>
     <p id="notice"><%= notice %></p>
   </div>
@@ -23,12 +23,12 @@
 
       <div class="container px-5 py-5 mx-auto">
         <div class="p-2 m-2">
-          <%= link_to '新しく言葉を登録する', new_post_path, class: " text-blue-900 focus:outline-none hover:bg-teal-600 rounded " %>
+          <%= link_to '新しく言葉を登録する', new_post_path, class:"ml-4 inline-flex text-black bg-green-600 bg-opacity-50 border-0 py-2 px-6 focus:outline-none hover:bg-green-300 hover:text-white rounded text-lg" %>
         </div>
-        <table class="table-auto w-full text-left whitespace-no-wrap  ">
+        <table class= "table-fixed w-full text-left whitespace-no-wrap ">
           <thead>
           <tr>
-            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">カテゴリ</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-tail-100 rounded-tl rounded-bl">カテゴリ</th>
             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">内容</th>
             <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">投稿者</th>
             <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">編集</th>
@@ -37,13 +37,13 @@
 
           <tbody class="bg-white divide-y divide-gray-200">
           <% @posts.each do |post| %>
-            <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+            <tr class="sm:table-row mb-2 sm:mb-0">
               <td class="border-t-2 border-gray-200 px-4 py-3 "><%= post.title %></td>
               <td class="border-t-2 border-gray-200 px-4 py-3"><%= post.content %></td>
               <td class="border-t-2 border-gray-200 px-4 py-3"><%= post.author %></td>
               <td class="border-t-2 border-gray-200 px-4 py-3 text-black">
-                <div><%= link_to 'Show', post,class:"text-black" %></div>
-                <div><%= link_to 'Edit', edit_post_path(post),class:"text-black"  %></div>
+                <div class=""><%= link_to 'Show', post,class:"ml-4 inline-flex text-black text-opacity-50 bg-green-600 bg-opacity-50 border-0 py-2 px-6 focus:outline-none hover:bg-green-300 hover:text-white rounded text-lg" %>
+                <div><%= link_to 'Edit', edit_post_path(post),class:"ml-4 inline-flex text-black text-opacity-50 bg-green-600 bg-opacity-50 border-0 py-2 px-6 focus:outline-none hover:bg-green-300 hover:text-white rounded text-lg" %></div>
               </td>
               <!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
             </tr>
