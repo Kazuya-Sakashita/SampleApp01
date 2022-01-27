@@ -29,6 +29,34 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
+      <library name="aasm (vbundled(5.2.0)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/gemfiles" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/gemfiles" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/aasm-5.2.0/gemfiles" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="actioncable (vbundled(6.1.4.4)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -1120,6 +1148,25 @@
           <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/puma-5.5.2/ext" />
           <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/puma-5.5.2/docs" />
           <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/puma-5.5.2/tools" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pundit (vbundled(2.1.1)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/pundit-2.1.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/pundit-2.1.1/spec" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/pundit-2.1.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/pundit-2.1.1/spec" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/pundit-2.1.1/spec" />
         </excluded>
       </library>
     </orderEntry>
