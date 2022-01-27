@@ -1324,6 +1324,37 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="ransack (vbundled(2.5.0)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/docs" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/logo" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/bug_report_templates" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/docs" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/logo" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/bug_report_templates" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/docs" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/logo" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundler/ruby/3.0.0/gems/ransack-2.5.0/bug_report_templates" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="rb-fsevent (vbundled(0.11.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
