@@ -10,6 +10,7 @@ module.exports = {
     extend: {},
   },
   variants: {
+    alignContent: ['responsive', 'hover', 'focus'],
     extend: {},
   },
   plugins: [],
