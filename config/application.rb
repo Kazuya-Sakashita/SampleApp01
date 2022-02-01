@@ -18,5 +18,10 @@ module SampleApp01
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators do |g|  # 不要なファイル作成しない
+      g.assets false          # CSS, JavaScriptファイル生成せず
+      g.skip_routes false     # trueならroutes.rb変更せず、falseなら通常通り変更
+      g.test_framework false  # testファイル生成せず
+    end                       # ここまで
   end
 end
