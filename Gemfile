@@ -27,6 +27,9 @@ gem 'devise', '~> 4.8'
 gem 'devise-i18n', '~> 1.10'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'nokogiri', '~> 1.12', '>= 1.12.5'
+gem 'ransack', '~> 2.5'
+gem 'aasm', '~> 5.2'
+gem 'pundit', '~> 2.1', '>= 2.1.1'
 
 
 # Use Active Storage variant
