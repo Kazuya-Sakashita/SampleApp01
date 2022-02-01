@@ -13,5 +13,5 @@ module.exports = {
     alignContent: ['responsive', 'hover', 'focus'],
     extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwind-hamburgers')],
 }
