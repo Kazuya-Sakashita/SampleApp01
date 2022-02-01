@@ -1,48 +1,92 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-red-500 text-9xl">読上げ掲示板</h1>
-<p>
-<hr>
-  使用方法の説明
-<hr>
-  New Post ー＞　Create Postでコンテントを追加できます。<br>
-  登録後、再生ボタンで読み上げができます。停止ボタンで読み上げ停止ができます。<br><br>
+<div>
+  <h1 class="text-white text-5xl text-center text-opacity-50 bg-indigo-500 rounded-lg ">読上げ掲示板</h1>
+</div>
 
-  すでに登録されているコンテントの再生は、Show　ー＞再生ボタンで読み上げが可能です。<br><br><br><br>
-</p>
-<hr>
-<%= search_form_for @q do |f| %>
-  <%= f.label :"category" %>
-  <%= f.search_field :category_cont %>
+<div class="max-w-md py-4 px-8 bg-white my-5">
+  <div class="flex justify-center md:justify-end -mt-16">
+  </div>
+  <div class="mt-10">
+    <h2 class="text-gray-800 text-3xl font-semibold text-gray-600">使用方法の説明</h2>
+    <p class="mt-2 text-gray-600">
+      ●New Post ー＞　Create Postでコンテントを追加できます。<br>
+      登録後、再生ボタンで読み上げができます。停止ボタンで読み上げ停止ができます。<br><br>
 
-  <%= f.submit %>
-<% end %>
+      ●すでに登録されているコンテントの再生は、<br>Contentを選択　ー＞再生ボタンで読み上げが可能です。
+    </p>
+  </div>
+  <div class="flex justify-end mt-4">
+    <%= link_to new_post_path do %>
+      <div clss="text-xl font-medium text-indigo-500">
+        <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">New
+          Post</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
 
 <hr>
-<table>
-  <thead>
+<div class="p-2 flex justify-center">
+  <%= search_form_for @q do |f| %>
+    <%= f.label :"category", class: "leading-7 text-sm text-gray-600" %>
+    <div>
+      <div class="flex space-x-2">
+        <div>
+          <%= f.search_field :category_cont, class: "inline-flex w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" %>
+        </div>
+        <div>
+          <%= f.submit class: "inline-flex w-full h-full lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<hr>
+<div>
+  <table class="mt-5 mx-2">
+    <thead>
     <tr>
       <th>Category</th>
       <th>Content</th>
-      <th>Author</th>
+      <!--    <th>Author</th>-->
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.category %></td>
-        <td ><%= post.content %></td>
-        <td><%= post.author %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-<!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        <td><div class="text-center"><%= post.category %></div></td>
+        <td>
+          <%= link_to post do %>
+            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded "><%= post.content %></div>
+          <% end %>
+        </td>
+        <!--      <td><%#= post.author %></td>-->
+        <!--      <td><%#= link_to 'Show', post %></td>-->
+        <td>
+          <%= link_to edit_post_path(post) do %>
+            <div class="bg-gray-100 border-0 py-2 px-8 text-center focus:outline-none hover:bg-gray-400 rounded ">編集</div>
+          <% end %>
+        </td>
+        <!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
-  </tbody>
-</table>
-
+    </tbody>
+  </table>
+</div>
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<div class="flex justify-around p-2 ">
+  <%= link_to new_post_path do %>
+    <div clss="text-xl font-medium text-indigo-500">
+      <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">New
+        Post</p>
+    </div>
+  <% end %>
+</div>
