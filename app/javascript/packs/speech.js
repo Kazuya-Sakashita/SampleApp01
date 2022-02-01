@@ -1,3 +1,4 @@
+
 var start = document.querySelector('#start');//再生ボタン
 var stop = document.querySelector('#stop');//停止ボタン
 
