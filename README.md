@@ -1,24 +1,11 @@
-# README
+# SampleApp001
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+テキスト入力した内容を保存し、その内容を読み上げてくれるアプリ。
+このアプリは、言葉を話せない人や、そのような状況で手軽に使用して欲しい
+思いがあり、スマホでの使用を考えたものです。
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+* 作成者　KAZUYA
+* E-mail　　kz2021019@gmail.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
