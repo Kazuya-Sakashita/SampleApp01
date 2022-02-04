@@ -62,17 +62,27 @@
     <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><div class="text-center"><%= post.category %></div></td>
+        <td>
+          <div class="text-center"><%= post.category %></div>
+        </td>
         <td>
           <%= link_to post do %>
-            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded "><%= post.content %></div>
+            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded ">
+              <%= post.content %><br>
+              <!--<%#= post.user.email %>-->
+
+            </div>
           <% end %>
         </td>
         <!--      <td><%#= post.author %></td>-->
         <!--      <td><%#= link_to 'Show', post %></td>-->
         <td>
-          <%= link_to edit_post_path(post) do %>
-            <div class="bg-gray-100 border-0 py-2 px-8 text-center focus:outline-none hover:bg-gray-400 rounded ">編集</div>
+          <% if user_signed_in? %>
+        <% if post.user_id == current_user.id %>
+            <%= link_to edit_post_path(post) do %>
+              <div class="bg-gray-100 border-0 py-2 px-8 text-center focus:outline-none hover:bg-gray-400 rounded ">編集</div>
+            <% end %>
+          <% end %>
           <% end %>
         </td>
         <!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->

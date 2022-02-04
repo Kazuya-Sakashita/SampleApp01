@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <h1 class="text-white text-5xl text-center text-opacity-50 bg-indigo-500 rounded-lg ">My post</h1>
+</div>
+
+<div class="max-w-md py-4 px-8 bg-white my-5">
+  <div class="flex justify-center md:justify-end -mt-16">
+  </div>
+
+</div>
+
+<div>
+  <table class="mt-5 mx-2">
+    <thead>
+    <tr>
+      <th>Category</th>
+      <th>Content</th>
+      <!--    <th>Author</th>-->
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td>
+          <div class="text-center"><%= post.category %></div>
+        </td>
+        <td>
+          <%= link_to post do %>
+            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded ">
+              <%= post.content %><br>
+              <!--<%#= post.user.email %>-->
+
+            </div>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to mypage_path(post), method: :delete do %>
+            <div class="bg-gray-100 border-0 py-2 px-8 text-center focus:outline-none hover:bg-gray-400 rounded ">削除</div>
+          <% end %>
+        </td>
+        <!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class="flex justify-around p-2 ">
+  <%= link_to new_post_path do %>
+    <div clss="text-xl font-medium text-indigo-500">
+      <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">New
+        Post</p>
+    </div>
+  <% end %>
+</div>

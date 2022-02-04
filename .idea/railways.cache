@@ -31,6 +31,14 @@
                                          PATCH  /homes/:id(.:format)                                                                              homes#update
                                          PUT    /homes/:id(.:format)                                                                              homes#update
                                          DELETE /homes/:id(.:format)                                                                              homes#destroy
+                                 mypages GET    /mypages(.:format)                                                                                mypages#index
+                                         POST   /mypages(.:format)                                                                                mypages#create
+                              new_mypage GET    /mypages/new(.:format)                                                                            mypages#new
+                             edit_mypage GET    /mypages/:id/edit(.:format)                                                                       mypages#edit
+                                  mypage GET    /mypages/:id(.:format)                                                                            mypages#show
+                                         PATCH  /mypages/:id(.:format)                                                                            mypages#update
+                                         PUT    /mypages/:id(.:format)                                                                            mypages#update
+                                         DELETE /mypages/:id(.:format)                                                                            mypages#destroy
            rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
               rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
            rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                           action_mailbox/ingresses/sendgrid/inbound_emails#create
