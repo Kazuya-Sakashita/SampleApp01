@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   }
   root 'posts#index'
   resources :posts
-  resources :homes
+  resource :homes
   resources :mypages
 
 
