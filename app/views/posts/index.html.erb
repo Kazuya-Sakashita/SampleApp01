@@ -9,7 +9,7 @@
   </div>
   <div class="mt-10">
     <h2 class="text-gray-800 text-3xl font-semibold text-gray-600">使用方法の説明</h2>
-    <p class="mt-2 text-gray-600">
+    <p class="mt-2 text-gray-600 font-semibold">
       ●New Post ー＞　Create Postでコンテントを追加できます。<br>
       登録後、再生ボタンで読み上げができます。停止ボタンで読み上げ停止ができます。<br><br>
 
@@ -18,8 +18,8 @@
   </div>
   <div class="flex justify-end mt-4">
     <%= link_to new_post_path do %>
-      <div clss="text-xl font-medium text-indigo-500">
-        <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+      <div clss="text-xl font-medium text-indigo-500 ">
+        <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 font-semibold focus:outline-none hover:bg-indigo-600 rounded">
           New Content
         </p>
       </div>
@@ -33,14 +33,14 @@
 <hr>
 <div class="p-2 flex justify-center">
   <%= search_form_for @q do |f| %>
-    <%= f.label :"category", class: "leading-7 text-sm text-gray-600" %>
+    <%= f.label :"category", class: "leading-7 text-sm text-gray-600 font-semibold" %>
     <div>
       <div class="flex space-x-2">
         <div>
-          <%= f.search_field :category_cont, class: "inline-flex w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" %>
+          <%= f.search_field :category_cont, class: "inline-flex w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-semibold" %>
         </div>
         <div>
-          <%= f.submit class: "inline-flex w-full h-full lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" %>
+          <%= f.submit class: "inline-flex w-full h-full lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded font-semibold" %>
         </div>
       </div>
     </div>
@@ -62,17 +62,32 @@
     <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><div class="text-center"><%= post.category %></div></td>
+        <td>
+          <div class="text-center font-semibold"><%= post.category %></div>
+        </td>
         <td>
           <%= link_to post do %>
-            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded "><%= post.content %></div>
+            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded font-semibold ">
+              <%= post.content %><br>
+              <!--<%#= post.user.email %>-->
+
+            </div>
           <% end %>
         </td>
         <!--      <td><%#= post.author %></td>-->
         <!--      <td><%#= link_to 'Show', post %></td>-->
         <td>
-          <%= link_to edit_post_path(post) do %>
-            <div class="bg-gray-100 border-0 py-2 px-8 text-center focus:outline-none hover:bg-gray-400 rounded ">編集</div>
+          <% if user_signed_in? %>
+            <% if post.user_id == current_user.id %>
+              <%= link_to edit_post_path(post) do %>
+                <svg class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"/>
+                  <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3"/>
+                  <line x1="16" y1="5" x2="19" y2="8"/>
+                </svg>
+              <% end %>
+            <% end %>
           <% end %>
         </td>
         <!--        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
@@ -86,8 +101,8 @@
 <div class="flex justify-around p-2 ">
   <%= link_to new_post_path do %>
     <div clss="text-xl font-medium text-indigo-500">
-      <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">New
-        Post</p>
+      <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white font-semibold bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+        New Content</p>
     </div>
   <% end %>
 </div>
