@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div>
-  <h1 class="text-white text-5xl text-center text-opacity-50 bg-indigo-500 rounded-lg ">My post</h1>
+  <h1 class="text-white text-5xl text-center text-opacity-50 bg-indigo-500 rounded-lg font-semibold ">My post</h1>
 </div>
 
 <div class="max-w-md py-4 px-8 bg-white my-5">
@@ -25,16 +25,16 @@
     <% @posts.each do |post| %>
       <tr>
         <td>
-          <div class="text-center"><%= post.category %></div>
+          <div class="text-center font-semibold "><%= post.category %></div>
         </td>
         <td>
           <%= link_to post do %>
-            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded ">
+            <div class="bg-indigo-100 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 font-semibold rounded ">
               <%= post.content %><br>
               <!--<%#= post.user.email %>-->
 
             </div>
-          <% end %>い
+          <% end %>
         </td>
         <td>
           <%= link_to mypage_path(post), method: :delete do %>
@@ -52,7 +52,7 @@
 <div class="flex justify-around p-2 ">
   <%= link_to new_post_path do %>
     <div clss="text-xl font-medium text-indigo-500">
-      <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">New
+      <p class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 font-semibold rounded-2xl">New
         Post</p>
     </div>
   <% end %>
