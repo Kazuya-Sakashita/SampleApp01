@@ -30,6 +30,10 @@ gem 'nokogiri', '~> 1.12', '>= 1.12.5'
 gem 'ransack', '~> 2.5'
 gem 'aasm', '~> 5.2'
 gem 'pundit', '~> 2.1', '>= 2.1.1'
+gem 'omniauth-twitter', '~> 1.4'
+gem 'omniauth-google-oauth2', '~> 1.0'
+gem 'omniauth-github', '~> 2.0'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
 
 
 # Use Active Storage variant
