@@ -6,6 +6,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     callback_for(:google)
   end
 
+  def twitter
+    callback_for(:twitter)
+  end
 
   # common callback method
   def callback_for(provider)
