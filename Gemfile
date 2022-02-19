@@ -34,7 +34,7 @@ gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth-google-oauth2', '~> 1.0'
 gem 'omniauth-github', '~> 2.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
-
+gem 'omniauth', '~> 2.0', '>= 2.0.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
