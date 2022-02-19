@@ -362,6 +362,7 @@ DEPENDENCIES
   kaminari (~> 1.2, >= 1.2.1)
   listen (~> 3.3)
   nokogiri (~> 1.12, >= 1.12.5)
+  omniauth (~> 2.0, >= 2.0.4)
   omniauth-github (~> 2.0)
   omniauth-google-oauth2 (~> 1.0)
   omniauth-rails_csrf_protection (~> 1.0, >= 1.0.1)
