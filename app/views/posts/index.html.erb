@@ -4,20 +4,20 @@
   <h1 class="text-white text-5xl text-center text-opacity-50 bg-indigo-500 rounded-lg ">読上げ掲示板</h1>
 </div>
 
-<div class="max-w-md py-2 px-1 bg-white my-5">
+<div class="max-w-md mx-auto py-2 px-1 bg-white my-5">
   <div class="flex justify-center md:justify-end -mt-16">
   </div>
   <div class="mt-10">
 
-      <%= link_to homes_path do %>
+    <%= link_to homes_path do %>
       <div class="flex">
-      <p class="text-indigo-400 text-2xl font-semibold text-gray-600">使用方法の説明</p>
-      <svg class="mx-2 h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-      </svg>
+        <p class="text-indigo-400 text-2xl font-semibold text-gray-600">使用方法の説明</p>
+        <svg class="mx-2 h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
       </div>
 
-  <% end %>
+    <% end %>
     <div>
     </div>
 
@@ -88,4 +88,5 @@
     </table>
   </div>
   <br>
+    <%= paginate @posts %>
 </div>
