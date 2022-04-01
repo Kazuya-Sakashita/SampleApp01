@@ -16,11 +16,11 @@
 # end
 
 
-# 10.times do |n|
-#   Post.create!(
-#     category:"test",
-#     content:"test content+#{n + 1}",
-#     user_id:4,
-#   )
+10.times do |n|
+  Post.create!(
+    category:"test",
+    content:"おはようございます+#{n + 1}",
+    user_id:1,
+  )
 
 end

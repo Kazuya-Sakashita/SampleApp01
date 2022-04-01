@@ -20,12 +20,12 @@ class MypagesController < ApplicationController
       case post.post_published_state
       when 'personal'
         post.share!
-        flash[:notice] = '非公開にしました！'
+        flash[:notice] = '公開にしました！'
         redirect_to mypage_path
 
       when 'share'
         post.personal!
-        flash[:notice] = '公開にしました！'
+        flash[:notice] = '非公開にしました！'
         redirect_to mypage_path
       else
         render :show
