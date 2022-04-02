@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true).page(params[:page]).per(10)
+    @posts = @posts.where(post_published_state:"share")
   end
 
 
