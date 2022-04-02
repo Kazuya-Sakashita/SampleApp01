@@ -69,7 +69,8 @@
             <% end %>
           </td>
           <td>
-            <% if user_signed_in? %>
+
+              <% if user_signed_in? %>
               <% if post.user_id == current_user.id %>
                 <%= link_to edit_post_path(post) do %>
                   <svg class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

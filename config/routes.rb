@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :posts
   resource :homes
   resources :mypages
+
+  get 'mypages/:id/state', to: 'mypages#post_state', as: 'post_state'
 end
