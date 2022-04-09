@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[ github twitter google_oauth2 ]
 
   has_many :posts, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmarks_posts, through: :bookmarks, source: :post
 
   def self.from_omniauth(access_token)
     data = access_token.info
@@ -18,5 +20,21 @@ class User < ApplicationRecord
   end
 
 
+  def own?(object)
+    object.user_id == self.id  #selfは省略可
+  end
 
+  def bookmark(post)
+    bookmarks_posts << post
+  end
+
+    # お気に入りを外す
+  def unbookmark(post)
+    bookmarks_posts.destroy(post)
+  end
+
+  # お気に入り登録しているか判定するメソッド
+  def bookmark?(post)
+    bookmarks_posts.include?(post)
+  end
 end

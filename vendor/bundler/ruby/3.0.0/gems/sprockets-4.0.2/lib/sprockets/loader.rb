@@ -271,7 +271,7 @@ module Sprockets
       #
       # uris - An Array of "dependencies" for example:
       #        ["environment-version", "environment-paths", "processors:type=text/css&file_type=text/css",
-      #           "file-digest:///Full/path/app/assets/stylesheets/application.css",
+      #           "file-digest:///Full/path/app/assets/stylesheets/application.scss",
       #           "processors:type=text/css&file_type=text/css&pipeline=self",
       #           "file-digest:///Full/path/app/assets/stylesheets"]
       #
@@ -304,7 +304,7 @@ module Sprockets
       # For example a history array may look something like this
       #
       #   [["environment-version", "environment-paths", "processors:type=text/css&file_type=text/css",
-      #     "file-digest:///Full/path/app/assets/stylesheets/application.css",
+      #     "file-digest:///Full/path/app/assets/stylesheets/application.scss",
       #     "processors:type=text/css&file_digesttype=text/css&pipeline=self",
       #     "file-digest:///Full/path/app/assets/stylesheets"]]
       #

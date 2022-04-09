@@ -146,7 +146,7 @@ class HelperTest < ActionView::TestCase
   end
 
   def test_stylesheet_pack_tag_splat
-    assert_equal stylesheet_pack_tag("bootstrap.css", "application.css", media: "all").in?([
+    assert_equal stylesheet_pack_tag("bootstrap.css", "application.scss", media: "all").in?([
       %(<link rel="stylesheet" href="/packs/bootstrap-c38deda30895059837cf.css" media="all" />\n) +
         %(<link rel="stylesheet" href="/packs/application-dd6b1cd38bfa093df600.css" media="all" />),
 

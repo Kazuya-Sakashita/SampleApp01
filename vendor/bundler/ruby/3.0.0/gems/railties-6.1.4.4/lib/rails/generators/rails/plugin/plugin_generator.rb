@@ -152,7 +152,7 @@ task default: :test
     def stylesheets
       if mountable?
         copy_file "rails/stylesheets.css",
-                  "app/assets/stylesheets/#{namespaced_name}/application.css"
+                  "app/assets/stylesheets/#{namespaced_name}/application.scss"
       elsif full?
         empty_directory_with_keep_file "app/assets/stylesheets/#{namespaced_name}"
       end

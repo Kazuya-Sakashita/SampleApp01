@@ -122,7 +122,7 @@ app/javascript:
   ├── packs:
   │   # only webpack entry files here
   │   └── application.js
-  │   └── application.css
+  │   └── application.scss
   └── src:
   │   └── my_component.js
   └── stylesheets:
