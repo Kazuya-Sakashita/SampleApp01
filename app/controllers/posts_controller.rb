@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_post, only: %i[show edit update destroy]
 
   # GET /posts or /posts.json
@@ -62,6 +63,9 @@ class PostsController < ApplicationController
     end
   end
 
+  def bookmarks
+    @bookmark_posts = current_user.bookmarks_posts.includes(:user).order(created_at: :desc)
+  end
 
 
   private

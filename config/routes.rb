@@ -6,7 +6,12 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks',
   }
   root 'posts#index'
-  resources :posts
+  resources :posts, shallow: true do
+    resource :bookmarks, only: [:create, :destroy]
+    collection do
+      get :bookmarks
+    end
+  end
   resource :homes
   resources :mypages
 

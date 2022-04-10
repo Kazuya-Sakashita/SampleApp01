@@ -7,20 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # 5.times do |n|
-  # 一般ユーザー
-  # User.create!(
-  #   email: "test+#{n + 1}@test.com",
-  #   password: "password",
-  #   password_confirmation: "password"
-  # )
+#   # 一般ユーザー
+#   User.create!(
+#     email: "test+#{n + 1}@test.com",
+#     password: "password",
+#     password_confirmation: "password"
+#   )
 # end
 
 
-10.times do |n|
+5.times do |n|
   Post.create!(
     category:"test",
     content:"おはようございます+#{n + 1}",
-    user_id:1,
+    user_id:3,
   )
 
 end
