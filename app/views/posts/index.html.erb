@@ -49,6 +49,8 @@
       <tr>
         <th>Category</th>
         <th>Content</th>
+        <th></th>
+        <th>bookmark</th>
         <!--    <th>Author</th>-->
         <th colspan="3"></th>
       </tr>
@@ -69,8 +71,7 @@
             <% end %>
           </td>
           <td>
-
-              <% if user_signed_in? %>
+            <% if user_signed_in? %>
               <% if post.user_id == current_user.id %>
                 <%= link_to edit_post_path(post) do %>
                   <svg class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -83,12 +84,15 @@
               <% end %>
             <% end %>
           </td>
-          <td><%= render "post", { post: post }%></td>
+          <td class=" flex">
+            <%= render "post", { post: post } %>
+            <%= post.bookmarks.length %>
+          </td>
         </tr>
       <% end %>
       </tbody>
     </table>
   </div>
   <br>
-    <%= paginate @posts %>
+  <%= paginate @posts %>
 </div>
