@@ -15,7 +15,9 @@
     <div class="col-12">
       <div class="row">
         <% if @bookmark_posts.present? %>
-          <%= render partial: "post", collection: @bookmark_posts %>
+          <% @bookmark_posts.each do |post|  %>
+          <%= post.content %>
+          <% end  %>
         <% else %>
           <p>ブックマーク中の掲示板がありません</p>
         <% end%>
