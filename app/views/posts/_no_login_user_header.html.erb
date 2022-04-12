@@ -34,6 +34,11 @@
                 </svg>
               <% end %>
             </div>
+            <div class="mx-3">
+              <%= link_to new_contact_path( user_id: current_user.id ) do %>
+                <svg class="h-11 w-11 text-indigo-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="3" y="5" width="18" height="14" rx="2" />  <polyline points="3 7 12 13 21 7" /></svg>
+              <% end %>
+            </div>
           </div>
                     <p class="place-self-center "> メールアドレス： <%= current_user.email %> </p>
 
@@ -64,6 +69,7 @@
           <% end %>
         </div>
       <% end %>
+
     </nav>
   </div>
 </header>

@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   end
   resource :homes
   resources :mypages
-
+  resources :contacts, only: [:new, :create]
   get 'mypages/:id/state', to: 'mypages#post_state', as: 'post_state'
 end
